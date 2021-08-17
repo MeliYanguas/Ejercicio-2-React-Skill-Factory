@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Formulario.css';
 
 const Formulario = () => {
   const [datos, setDatos] = useState({
@@ -28,13 +29,13 @@ const Formulario = () => {
   };
 
   return (
-    <div>
+    <div className="form-component">
       <h1>Formulario</h1>
-      <form onSubmit={enviarDatos}>
+      <form onSubmit={enviarDatos} className="form">
         <div>
           <input
             type="text"
-            placeholder="nombre del producto"
+            placeholder="Nombre del producto"
             name="title"
             onChange={handleInputChange}
           />
@@ -42,7 +43,7 @@ const Formulario = () => {
         <div>
           <input
             type="number"
-            placeholder="precio"
+            placeholder="Precio"
             name="price"
             onChange={handleInputChange}
           />
@@ -50,7 +51,7 @@ const Formulario = () => {
         <div>
           <textarea
             type="text"
-            placeholder="descripcion"
+            placeholder="Descripción"
             name="description"
             onChange={handleInputChange}
           />
@@ -58,7 +59,7 @@ const Formulario = () => {
         <div>
           <input
             type="text"
-            placeholder="categoria"
+            placeholder="Categoría"
             name="category"
             onChange={handleInputChange}
           />
@@ -68,6 +69,7 @@ const Formulario = () => {
             type="file"
             name="image"
             onChange={handleInputChange}
+            className="btn-img"
           />
         </div>
         <div>
